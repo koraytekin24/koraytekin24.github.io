@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Koray Tekin</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Yeşil RGB Çizgisi */
+    @keyframes rgbAnimation {
+      0% {
+        transform: translateX(0) translateY(0);
+        box-shadow: 0 0 10px 5px rgba(0, 170, 96, 0.6);
+      }
+
+      25% {
+        transform: translateX(50px) translateY(0);
+        box-shadow: 0 0 10px 5px rgba(0, 170, 96, 0.6);
+      }
+
+      50% {
+        transform: translateX(0) translateY(50px);
+        box-shadow: 0 0 10px 5px rgba(0, 170, 96, 0.6);
+      }
+
+      75% {
+        transform: translateX(-50px) translateY(0);
+        box-shadow: 0 0 10px 5px rgba(0, 170, 96, 0.6);
+      }
+
+      100% {
+        transform: translateX(0) translateY(0);
+        box-shadow: 0 0 10px 5px rgba(0, 170, 96, 0.6);
+      }
+    }
+
+    .rgb-light {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      z-index: -1;
+      animation: rgbAnimation 3s infinite linear;
+    }
+
+    /* Fade-in Animasyonu */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fadeIn {
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    /* Card Animasyonu */
+    @keyframes cardHover {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      100% {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    .card:hover {
+      animation: cardHover 0.3s ease-in-out forwards;
+    }
+
+    /* Modern Border Effect for Sections */
+    .section-border {
+      position: relative;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .section-border::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: #00aa60; /* Yeşil çizgi */
+      border-radius: 5px;
+    }
+
+    /* Profil Fotoğrafı */
+    .profile-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 5px solid #00aa60;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+  <!-- RGB Işık Efekti Kaldırıldı -->
+
+  <header class="bg-white shadow-md py-6">
+    <div class="container mx-auto text-center">
+      <img src="your-photo.jpg" alt="Koray Tekin" class="profile-photo mx-auto animate-fadeIn" />
+      <h1 class="text-4xl font-bold animate-fadeIn text-gray-900">Koray Tekin</h1>
+      <p class="mt-2 text-lg text-gray-600 animate-fadeIn">Kurumsal İlişkiler ve İletişim - İç İletişim Sorumlusu</p>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-10">
+    <section class="section-border animate-fadeIn">
+      <h2 class="text-2xl font-semibold mb-4">Hakkımda</h2>
+      <p>
+        Herkese selam, ben Koray!<br />
+        Dokuz Eylül Üniversitesi İşletme Fakültesi İngilizce İşletme bölümü'nden mezun oldum. Şu anda JTI şirketinde
+        Kurumsal İlişkiler ve İletişim Departmanı'nda Yeni Mezun programı dahilinde İç İletişim Yeni Mezunu olarak
+        destek veriyorum. Spor ve sanat etkinliklerini çok seviyorum. Küçük yaştan beri takım sporlarıyla uğraşıyorum. Bu
+        sebeple kalabalık bir ekiple çalışma konusunda kendime güveniyorum.
+      </p>
+    </section>
+
+    <section class="section-border animate-fadeIn">
+      <h2 class="text-2xl font-semibold mb-4">İlgi Alanlarım</h2>
+      <ul class="list-disc list-inside">
+        <li>Spor (Basketbol, Futbol, Tenis, Yüzme)</li>
+        <li>Bira'nın Tarihi ve Gelişimi (Lager, Pilsner ve Ale başta olmak üzere)</li>
+        <li>Sanat (Tiyatral Opera, Sergi, Müze Gezileri ve Orta Çağ Tarihi)</li>
+      </ul>
+    </section>
+
+    <section class="section-border animate-fadeIn">
+      <h2 class="text-2xl font-semibold mb-4">İletişim</h2>
+      <ul class="list-inside list-disc">
+        <li>Email: <a href="mailto:tekinkoray08@gmail.com" class="text-blue-600 hover:underline">tekinkoray08@gmail.com</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/koraytekin24" class="text-blue-600 hover:underline">linkedin.com/in/koraytekin24</a></li>
+        <li>Cep Telefonu: <a href="tel:+905395023394" class="text-blue-600 hover:underline">+90 539 502 33 94</a></li>
+      </ul>
+    </section>
+
+    <section class="section-border animate-fadeIn">
+      <h2 class="text-2xl font-semibold mb-4">Projelerim ve Katıldığım Etkinlikler</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="card bg-white shadow-lg rounded-lg p-4">
+          <h3 class="text-xl font-semibold">Sosyal Kulüpler Etkinliği</h3>
+          <p>Çalışanların motivasyonunu artırmak amacıyla gerçekleştirdiğimiz sosyal kulüpler etkinliği hakkında detaylar.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="card bg-white shadow-lg rounded-lg p-4">
+          <h3 class="text-xl font-semibold">Yeni Mezun Programı</h3>
+          <p>JTI'deki yeni mezun programında iç iletişim alanında yaptığım çalışmalar ve deneyimler.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="card bg-white shadow-lg rounded-lg p-4">
+          <h3 class="text-xl font-semibold">Sanat Etkinlikleri</h3>
+          <p>Sanatla ilgili katıldığım sergiler, tiyatro oyunları ve müze gezileri hakkında bilgiler.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white shadow-inner py-4 mt-10">
+    <div class="container mx-auto text-center text-sm text-gray-500">
+      © 2025 Koray Tekin
+    </div>
+  </footer>
+</body>
+
+</html>
